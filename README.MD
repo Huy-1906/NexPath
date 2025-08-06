@@ -2,62 +2,156 @@
 
 
           
-# NexPath - LFAM Platform
+I need to check the current README.MD file to understand what needs to be rewritten.
+        
+            
+toolName: view_files
+            
+status: success
+          
+            
+filePath: d:\lab\NexPath\README.MD
+          
+I need to see the rest of the README.MD file to get a complete understanding of its content.
+        
+            
+toolName: view_files
+            
+status: success
+          
+            
+filePath: d:\lab\NexPath\README.MD
+          
+I need to check if there's a frontend README.md file to understand the frontend-specific documentation.
+        
+            
+toolName: view_files
+            
+status: success
+          
+            
+filePath: d:\lab\NexPath\frontend\README.md
+          
+I need to check the package.json in the root directory to understand the project's dependencies and scripts.
+        
+            
+toolName: view_files
+            
+status: success
+          
+            
+filePath: d:\lab\NexPath\package.json
+          
+I need to check the backend requirements.txt file to understand the Python dependencies.
+        
+            
+toolName: view_files
+            
+status: success
+          
+            
+filePath: d:\lab\NexPath\backend\requirements.txt
+          
+I need to check the docker-compose.yml file to understand the containerized services.
+        
+            
+toolName: view_files
+            
+status: success
+          
+            
+filePath: d:\lab\NexPath\docker-compose.yml
+          
+I need to see the rest of the docker-compose.yml file.
+        
+            
+toolName: view_files
+            
+status: success
+          
+            
+filePath: d:\lab\NexPath\docker-compose.yml
+          
+# NexPath - Intelligent LFAM Platform
 
 ![NexPath Logo](https://via.placeholder.com/200x80?text=NexPath)
 
 ## Overview
 
-NexPath is an intelligent software platform for Large Format Additive Manufacturing (LFAM) that integrates AI-assisted toolpath generation, thermal simulation, real-time process monitoring, and hybrid manufacturing support. The system is designed for industrial-scale 3D printing environments.
-
-## Table of Contents
-
-- [NexPath - LFAM Platform](#nexpath---lfam-platform)
-  - [Overview](#overview)
-  - [Table of Contents](#table-of-contents)
-  - [Features](#features)
-  - [Architecture](#architecture)
-  - [Installation](#installation)
-    - [Prerequisites](#prerequisites)
-    - [Development Setup](#development-setup)
-    - [Docker Setup](#docker-setup)
-  - [Usage](#usage)
-    - [Running the Application](#running-the-application)
-      - [Development Mode](#development-mode)
-      - [Production Mode (Docker)](#production-mode-docker)
-    - [User Interface](#user-interface)
-  - [Core Modules](#core-modules)
-    - [UI/UX Layer](#uiux-layer)
-    - [AI Copilot](#ai-copilot)
-    - [Thermal Simulation Engine](#thermal-simulation-engine)
-    - [Toolpath Generator](#toolpath-generator)
-    - [Hybrid Manufacturing Module](#hybrid-manufacturing-module)
-    - [Real-Time Monitoring](#real-time-monitoring)
-    - [Cloud Backend](#cloud-backend)
-    - [Plugin API System](#plugin-api-system)
-  - [Development](#development)
-    - [Project Structure](#project-structure)
-    - [Technology Stack](#technology-stack)
-    - [Contributing](#contributing)
-  - [Testing](#testing)
-  - [Deployment](#deployment)
-    - [Docker Deployment](#docker-deployment)
-    - [Manual Deployment](#manual-deployment)
-  - [License](#license)
-  - [Contact](#contact)
+NexPath is an advanced software platform for Large Format Additive Manufacturing (LFAM) that integrates AI-driven toolpath generation, thermal simulation, real-time monitoring, and hybrid manufacturing capabilities. Designed for industrial-scale 3D printing, NexPath optimizes manufacturing processes through intelligent algorithms and comprehensive analysis tools.
 
 ## Features
 
-- **AI-Assisted Toolpath Generation**: Automatically generate optimized toolpaths using machine learning models trained on geometric and mechanical datasets.
-- **Thermal Simulation**: Predict and visualize thermal behavior during deposition to prevent warping, delamination, and other issues.
-- **Real-Time Process Monitoring**: Capture and analyze thermal camera data, deposition rate, material usage, and other metrics during printing.
-- **Hybrid Manufacturing Support**: Coordinate additive and subtractive manufacturing processes with CAM integration.
-- **Cross-Platform Interface**: Intuitive UI for designers, engineers, and operators, available on desktop and web.
-- **Plugin System**: Extensible architecture allowing third-party tools and manufacturers to build custom modules.
+- **AI-Powered Toolpath Generation**: Create optimized toolpaths automatically using machine learning models trained on geometric and mechanical datasets
+- **Real-Time Thermal Simulation**: Predict and visualize thermal behavior during deposition to prevent defects and ensure part quality
+- **Process Monitoring**: Track and analyze thermal data, deposition rates, and material usage during printing operations
+- **Hybrid Manufacturing**: Seamlessly coordinate additive and subtractive processes with integrated CAM functionality
+- **Cross-Platform Interface**: Access the platform through intuitive web and desktop applications
+- **Extensible Plugin System**: Customize functionality with third-party tools and manufacturer-specific modules
+
+## Quick Start
+
+### Prerequisites
+
+- Docker and Docker Compose
+- Node.js 16+ (for development)
+- Python 3.9+ (for development)
+- Git
+
+### Development Setup
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/yourusername/nexpath.git
+cd nexpath
+```
+
+2. **Backend setup**
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+cd backend
+pip install -r requirements.txt
+```
+
+3. **Frontend setup**
+
+```bash
+cd ../frontend
+npm install
+```
+
+4. **Start the backend server**
+
+```bash
+cd ../backend
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+5. **Start the frontend application**
+
+```bash
+cd ../frontend
+npm run dev  # For web interface
+# OR
+npm run electron:dev  # For desktop application
+```
+
+### Docker Deployment
+
+For a complete containerized environment:
+
+```bash
+docker-compose up -d
+```
+
+Access the web interface at http://localhost:80
 
 ## Architecture
 
-NexPath follows a modular architecture with the following components:
+NexPath follows a modular architecture with clear separation of concerns:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -77,155 +171,30 @@ NexPath follows a modular architecture with the following components:
 └─────────────┴─────────────┴───────────┴─────────────┴───────┘
 ```
 
-## Installation
-
-### Prerequisites
-
-- Docker and Docker Compose
-- Node.js 16+ (for local development)
-- Python 3.9+ (for local development)
-- Git
-
-### Development Setup
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/nexpath.git
-cd nexpath
-```
-
-2. Set up the Python virtual environment:
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-cd backend
-pip install -r requirements.txt
-```
-
-3. Set up the frontend:
-
-```bash
-cd ../frontend
-npm install
-```
-
-### Docker Setup
-
-For a complete environment with all services:
-
-```bash
-docker-compose up -d --build
-```
-
-This will start the following services:
-- Frontend (React + Electron)
-- Backend API (FastAPI)
-- Database (PostgreSQL)
-- Cache (Redis)
-
-## Usage
-
-### Running the Application
-
-#### Development Mode
-
-1. Start the backend:
-
-```bash
-cd backend
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
-```
-
-2. Start the frontend:
-
-```bash
-cd frontend
-npm run dev
-```
-
-3. For Electron desktop app:
-
-```bash
-cd frontend
-npm run electron:dev
-```
-
-#### Production Mode (Docker)
-
-```bash
-docker-compose up -d
-```
-
-Access the web interface at http://localhost:80
-
-### User Interface
-
-The NexPath interface consists of the following main sections:
-
-- **Dashboard**: Overview of recent projects, system status, and quick actions
-- **Model Viewer**: 3D visualization of models with analysis tools
-- **Toolpath Generator**: Create and edit toolpaths with AI assistance
-- **Thermal Simulation**: Run and visualize thermal simulations
-- **Settings**: Configure system parameters and user preferences
-
 ## Core Modules
 
 ### UI/UX Layer
-
-The user interface is built with React, TailwindCSS, and Material-UI components. For desktop applications, Electron is used to create a native experience.
-
-**Key files:**
-- `frontend/src/App.jsx`: Main application component
-- `frontend/src/components/Layout.jsx`: Application layout structure
-- `frontend/src/pages/`: Individual page components
+Modern, responsive interface built with React, TailwindCSS, and Three.js for 3D visualization. Available as both web application and Electron-based desktop app.
 
 ### AI Copilot
-
-The AI Copilot module uses machine learning to optimize toolpaths based on geometric features, material properties, and manufacturing constraints.
-
-**Key files:**
-- `engine/ai_copilot/ai_optimizer.py`: Core AI optimization algorithms
+Machine learning algorithms that optimize toolpaths based on part geometry, material properties, and manufacturing constraints.
 
 ### Thermal Simulation Engine
-
-The thermal simulation engine predicts temperature distribution and thermal history during the printing process using finite element analysis.
-
-**Key files:**
-- `engine/thermal_sim/thermal_simulator.py`: Thermal simulation implementation
+FEniCS-based finite element analysis that predicts temperature distribution and thermal history during printing.
 
 ### Toolpath Generator
-
-The toolpath generator converts 3D models into machine instructions (G-code) with support for various infill patterns, layer heights, and printing strategies.
-
-**Key files:**
-- `engine/slicer/slicer.py`: Core slicing and toolpath generation logic
+Advanced slicing engine that converts 3D models into optimized machine instructions with support for various infill patterns and printing strategies.
 
 ### Hybrid Manufacturing Module
-
-This module coordinates additive and subtractive processes, allowing for machining operations between deposition layers.
+Coordinates additive and subtractive processes, enabling machining operations between deposition layers.
 
 ### Real-Time Monitoring
-
-The monitoring system collects and analyzes data from sensors, cameras, and machine controllers during printing.
+Collects and analyzes sensor data, thermal imaging, and machine feedback during printing operations.
 
 ### Cloud Backend
+FastAPI-based server providing API services, database access, authentication, and job management.
 
-The backend provides API services, database access, authentication, and job management.
-
-**Key files:**
-- `backend/main.py`: Main FastAPI application
-- `backend/models/`: Database models and schemas
-- `backend/api/`: API endpoints
-
-### Plugin API System
-
-The plugin system allows third-party developers to extend NexPath functionality with custom modules.
-
-## Development
-
-### Project Structure
+## Project Structure
 
 ```
 nexpath/
@@ -235,7 +204,6 @@ nexpath/
 │   │   ├── components/    # Reusable UI components
 │   │   ├── pages/         # Page components
 │   │   └── utils/         # Utility functions
-│   └── ... 
 ├── backend/               # FastAPI server for API handling
 │   ├── api/               # API endpoints
 │   ├── models/            # Database models
@@ -251,35 +219,55 @@ nexpath/
 └── docker/                # Docker configuration
 ```
 
-### Technology Stack
+## Technology Stack
 
-**Frontend:**
-- React.js with Hooks and Context API
-- TailwindCSS for styling
-- Material-UI components
-- Three.js for 3D visualization
-- Electron for desktop applications
+- **Frontend**: React, TailwindCSS, Material-UI, Three.js, Electron
+- **Backend**: FastAPI, SQLAlchemy, PostgreSQL, Redis
+- **AI/ML**: PyTorch, NumPy, Scikit-learn
+- **Simulation**: FEniCS, NumPy
+- **DevOps**: Docker, Nginx
+
+## Running the Application
+
+### Development Mode
 
 **Backend:**
-- FastAPI (Python) for REST API
-- SQLAlchemy for ORM
-- PostgreSQL for database
-- Redis for caching and job queues
+```bash
+cd backend
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
 
-**AI/ML Components:**
-- PyTorch for machine learning models
-- NumPy for numerical computing
-- Scikit-learn for data processing
+**Frontend (Web):**
+```bash
+cd frontend
+npm run dev
+```
 
-**Simulation:**
-- FEniCS for finite element analysis
-- NumPy for numerical operations
+**Frontend (Desktop):**
+```bash
+cd frontend
+npm run electron:dev
+```
 
-**DevOps:**
-- Docker and Docker Compose for containerization
-- Nginx for reverse proxy
+### Production Mode
 
-### Contributing
+```bash
+docker-compose up -d
+```
+
+## Testing
+
+```bash
+# Backend tests
+cd backend
+python -m pytest
+
+# Frontend tests
+cd frontend
+npm test
+```
+
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/your-feature-name`
@@ -287,50 +275,18 @@ nexpath/
 4. Push to the branch: `git push origin feature/your-feature-name`
 5. Open a pull request
 
-## Testing
-
-NexPath uses a combination of unit tests, integration tests, and end-to-end tests.
-
-```bash
-# Run backend tests
-cd backend
-python -m pytest
-
-# Run frontend tests
-cd frontend
-npm test
-```
-
-## Deployment
-
-### Docker Deployment
-
-The recommended deployment method is using Docker Compose:
-
-```bash
-docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
-```
-
-### Manual Deployment
-
-For manual deployment, refer to the detailed instructions in the `docs/deployment.md` file.
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For questions, support, or collaboration opportunities, please contact:
+For questions, support, or collaboration opportunities:
 
 - Email: giahuy196cv@gmail.com
-- Website: 
+- Website: [Coming Soon]
 
 ---
 
 © 2025 NexPath. All rights reserved.
-
-        # NexPath
-# NexPath
-# NexPath
-# NexPath
+        
