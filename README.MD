@@ -16,14 +16,14 @@ NexPath is an advanced software platform for Large Format Additive Manufacturing
 - Python 3.9+ (for development)
 - Git
 ### Development Setup
-1. 1.
-   Clone the repository
+1. Clone the repository
+   
 ```
 git clone https://github.com/yourusername/nexpath.
 git
 cd nexpath
 ```
-2. 1.
+2. 
    Backend setup
 ```
 python -m venv .venv
@@ -31,19 +31,19 @@ python -m venv .venv
 cd backend
 pip install -r requirements.txt
 ```
-3. 1.
+3. 
    Frontend setup
 ```
 cd ../frontend
 npm install
 ```
-4. 1.
+4. 
    Start the backend server
 ```
 cd ../backend
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
-5. 1.
+5. 
    Start the frontend application
 ```
 cd ../frontend
