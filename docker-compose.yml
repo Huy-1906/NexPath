@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.frontend
+    container_name: nexpath-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - nexpath-network
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.backend
+    container_name: nexpath-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/nexpath
+      - ENVIRONMENT=production
+    depends_on:
+      - db
+    volumes:
+      - ./data:/app/data
+    networks:
+      - nexpath-network
+
+  db:
+    image: postgres:13
+    container_name: nexpath-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=nexpath
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - nexpath-network
+
+  redis:
+    image: redis:alpine
+    container_name: nexpath-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - nexpath-network
+
+networks:
+  nexpath-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
